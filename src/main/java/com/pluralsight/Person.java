@@ -30,6 +30,15 @@ public class Person {
         return this.firstName + " has " + this.health + " health ";
     }
 
+    public void takeDamage(int amount ){
+        this.health -= amount;
+       if  (this.health < 0) health = 0;
+    }
+
+    public void fight(Person opponent){
+        System.out.println(this.firstName + " prepares to fight " + opponent.firstName);
+    }
+
 
 
     public String getFirstName() {
